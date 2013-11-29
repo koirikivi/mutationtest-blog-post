@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mutaatiotestaus</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="container" style="width: 600px">
+<h1>Mutaatiotestaus</h1>
+
+<p><a href="http://en.wikipedia.org/wiki/Mutation_testing">Mutaatiotestaus</a> (eng. mutation testing) on tapa testata koodia varten
+kehitettyjä testejä. Idea on yksinkertainen: Luodaan testattavasta ohjelmasta
+virheellisiä versioita ("mutantteja") ja ajetaan ne testien läpi. Jos testit
+menevät läpi, niissä on puutteita.</p>
+
+<p>Otetaan parempaa selitystä varten tarkasteluun seuraava - tarkoituksella
+yksinkertaistettu - koodinpätkä...</p>
+
+<pre><code>def bigger_number(x, y):
+    if x &gt; y:
+        return x
+    elif x &lt; y:
+        return y
+</code></pre>
+
+<p>...ja sille seuraavat testit.</p>
+
+<pre><code>class BiggerNumberTests(unittest.TestCase):
+    def test_2_is_bigger_than_1(self):
+        assert bigger_number(2, 1) == 2
+
+    def test_1_is_smaller_than_2(self):
+        assert bigger_number(1, 2) == 2
+</code></pre>
+
+<p>Testit menevät läpi:</p>
+
+<pre><code>$ nosetests
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.008s
+</code></pre>
+
+<p>Voidaanko tällä perusteella sanoa, että testattava koodi toimii oikein?
+Kysymykseen on tietysti useimmissa tapauksissa mahdoton vastata,</p>
+
+<hr />
+
+<p>Implementaatiot
+    Python
+    Java
+    Djangon yms testaus</p>
+
+<p>http://en.wikipedia.org/wiki/Code_coverage</p>
+
+<p>A. P. Mathur, Foundations of Software Testing, Prentice Hall, 2008</p>
+
+<p>http://accu.org/var/uploads/journals/overload108.pdf</p>
+</body></html>
