@@ -256,7 +256,7 @@ Referenssit / luettavaa
 * [3]: https://github.com/sk-/elcap
 * [4]: http://pitest.org/
 * [5]: http://en.wikipedia.org/wiki/Mutation_testing#External_links
-* [6]: http://wwww.djangoproject.com/
+* [6]: http://www.djangoproject.com/
 * [7]: http://accu.org/var/uploads/journals/overload108.pdf
 * A. P. Mathur, Foundations of Software Testing, Prentice Hall, 2008
 
